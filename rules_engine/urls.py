@@ -8,4 +8,5 @@ api_router.register(r'engines', EngineViewSet, basename='engines')
 
 urlpatterns = [
     path('api/', include(api_router.urls)),
+    path('engines/', EngineListView.as_view()),
 ]

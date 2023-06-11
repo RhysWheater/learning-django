@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('#engines').DataTable();
+            });
+        </script>
+    </head>
+    <body>
+        <table id="engines" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Engine</th>
+                    <th>Version</th>
+                    <th>Commit</th>
+                    <th>Created</th>
+                </tr>
+            </thead>
+            {% for engine in object_list %}
+            <tr>
+                <td>{{ engine.id }}</td>
+                <td>{{ engine.version }}</td>
+                <td>{{ engine.commit }}</td>
+                <td>{{ engine.created }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
