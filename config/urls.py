@@ -20,4 +20,5 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('git/', include('git.urls'), name='git'),
+    path('rules_engine/', include('rules_engine.urls'), name='rules_engine'),
 ]
