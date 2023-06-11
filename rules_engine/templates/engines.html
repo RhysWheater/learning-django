@@ -26,7 +26,7 @@
             <tr>
                 <td>{{ engine.id }}</td>
                 <td>{{ engine.version }}</td>
-                <td>{{ engine.commit }}</td>
+                <td><a href="{% url 'commits-detail' engine.commit.id %}">{{ engine.commit }}</a></td>
                 <td>{{ engine.created }}</td>
             </tr>
             {% endfor %}
